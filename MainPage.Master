@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="AwP_Project.MainPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <style type="text/css">
+       
+        .auto-style6 {
+            height: 20px;
+            width: 111px;
+        }
+       
+        .auto-style7 {
+            width: 113%;
+            height: 50px;
+            background-color: #9088D4;
+        }
+       
+    </style>
+
+    <link rel="stylesheet" href="main.css" />
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table>
+            <tr>
+                <td class="auto-style1" colspan="12">
+                    <div class="auto-style7">
+                        <ul>
+                            <li class="auto-style4">
+                                <asp:HyperLink class="link" ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                            </li>
+                            <li class="auto-style6">
+                                <asp:HyperLink class="link" ID="HyperLink2" runat="server" NavigateUrl="~/findJobPage.aspx">Search Jobs</asp:HyperLink>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="12">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <h1>hii </h1>
+                        <h1>&nbsp;</h1>
+
+                    </asp:ContentPlaceHolder>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

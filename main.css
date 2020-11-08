@@ -1,0 +1,100 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color:red;
+}
+li{
+    display:inline-block;
+    margin:8px;
+    font-size:17px;
+    color:white;
+    
+}
+.nav{
+  
+   
+    width:100%;
+    height:40px;
+    background-color:#9088D4;
+}
+.link{
+    color:white;
+    text-decoration:none;
+}
+.link:hover{
+    color:black;
+}
+.auto-style1 {
+    width: 698px;
+}
+
+.auto-style2 {
+    width: 100%;
+    height: 100%;
+}
+
+.auto-style3 {
+    height: 20px;
+    width: 49px;
+}
+
+.auto-style4 {
+    width: 48px;
+}
+
+.auto-style5 {
+    width: 135%;
+    height: 50px;
+    background-color: #9088D4;
+}
+.main{
+    margin-top:15px;
+    
+}
+
+#JobsAvailable{
+    
+  
+
+}
+.job-title {
+    text-align: center;
+    margin: 8px;
+    padding: 10px;
+    color: #7579e7;
+    font-weight: bold;
+}
+.drop-down-filter {
+    text-align: center;
+    border: 1px solid red;
+    height: 498px;
+    background-color: #fceef5;
+}
+.filter-title {
+    text-align: left;
+    margin: 12px;
+    color: #7579e7;
+    font-weight:bold;
+}
+.filters {
+    background-color: #9088d4;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+#FiterJob{
+    
+}
+.jobs-available {
+    border: 1px solid red;
+    margin: 10px;
+    background-color: #fceef5;
+}
+.category-title {
+    margin: 10px;
+    color: #f6830f;
+    padding: 5px;
+    background-color: #f1f6f9;
+    
+}
