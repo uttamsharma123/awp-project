@@ -4,7 +4,7 @@
 h1{
     color:red;
 }
-li{
+.li-link{
     display:inline-block;
     margin:8px;
     font-size:17px;
@@ -53,11 +53,7 @@ li{
     
 }
 
-#JobsAvailable{
-    
-  
 
-}
 .job-title {
     text-align: center;
     margin: 8px;
@@ -67,9 +63,10 @@ li{
 }
 .drop-down-filter {
     text-align: center;
-    border: 1px solid red;
+   /* border: 1px solid red;*/
     height: 498px;
     background-color: #fceef5;
+    padding:10px;
 }
 .filter-title {
     text-align: left;
@@ -87,14 +84,38 @@ li{
     
 }
 .jobs-available {
-    border: 1px solid red;
+   /* border: 1px solid red;*/
     margin: 10px;
     background-color: #fceef5;
 }
-.category-title {
-    margin: 10px;
+
+
+/*styling for jobs div */
+li {
+    display: inline-block;
+    margin: 15px;
+    font-size: 12px;
+    color: #7e7474;
+}
+.job-details{
+    background-color:white;
+    border:1px solid yellow;
+    margin:10px;
+    padding:10px;
+
+}
+.find-job-title {
+   
     color: #f6830f;
     padding: 5px;
     background-color: #f1f6f9;
-    
 }
+.view-details{
+    text-align:right;
+    font-size:12px;
+    margin:10px;
+}
+hr {
+    color: #7e7474;
+}
+/***********************************************/
