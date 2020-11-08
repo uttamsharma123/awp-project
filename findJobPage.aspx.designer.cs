@@ -15,22 +15,22 @@ namespace AwP_Project
     {
 
         /// <summary>
-        /// DropDownList1 control.
+        /// CategoryDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList CategoryDropDown;
 
         /// <summary>
-        /// DropDownList2 control.
+        /// LocationDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList LocationDropDownList;
 
         /// <summary>
         /// Button1 control.

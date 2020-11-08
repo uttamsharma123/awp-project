@@ -8,12 +8,12 @@
         <div class="drop-down-filter">
             <h3 class="filters" style="height: 21px">Filters</h3>
             <p class="filter-title">Category</p>
-            <asp:DropDownList ID="DropDownList1" runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px">
+            <asp:DropDownList ID="CategoryDropDown"  runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="CategoryDropDown_SelectedIndexChanged">
                 <asp:ListItem>Marketing</asp:ListItem>
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <p class="filter-title">Location</p>
-            <asp:DropDownList ID="DropDownList2" runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px">
+            <asp:DropDownList ID="LocationDropDownList" runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px">
                 <asp:ListItem>Mumbai</asp:ListItem>
             </asp:DropDownList>
             <br />
