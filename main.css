@@ -58,16 +58,11 @@ h1{
     text-align: center;
     margin: 8px;
     padding: 10px;
-    color: #7579e7;
+    color: white;
     font-weight: bold;
+    background-color: #9088d4;
 }
-.drop-down-filter {
-    text-align: center;
-   /* border: 1px solid red;*/
-    height: 498px;
-    background-color: #fceef5;
-    padding:10px;
-}
+
 .filter-title {
     text-align: left;
     margin: 12px;
@@ -86,11 +81,18 @@ h1{
 .jobs-available {
    /* border: 1px solid red;*/
     margin: 10px;
-    background-color: #fceef5;
+    background-color:white;
 }
 
 
 /*styling for jobs div */
+.drop-down-filter {
+    text-align: center;
+    /* border: 1px solid red;*/
+    background-color: #fceef5;
+    padding: 10px;
+    margin:10px;
+}
 li {
     display: inline-block;
     margin: 15px;
@@ -102,6 +104,7 @@ li {
     border:1px solid yellow;
     margin:10px;
     padding:10px;
+    width:500px;
 
 }
 .find-job-title {
@@ -119,3 +122,26 @@ hr {
     color: #7e7474;
 }
 /***********************************************/
+
+.main-div{
+  position:relative;
+  top:-27%;
+  left:350px;
+  width:500px;
+ 
+ 
+}
+.filter-box {
+    margin-top:10px;
+    position:sticky;
+    margin-left:20px;
+
+}
+.jobs {
+   
+   
+    margin: 10px;
+    padding: 10px;
+    border-radius:50px;
+    background-color: #fceef5;
+}
