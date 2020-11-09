@@ -42,13 +42,13 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Label1 control.
+        /// JobTitle12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label JobTitle12;
 
         /// <summary>
         /// Panel2 control.
@@ -123,13 +123,13 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.Label ApplyDate;
 
         /// <summary>
-        /// HyperLink1 control.
+        /// ViewDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Button ViewDetails;
 
         /// <summary>
         /// Panel1 control.

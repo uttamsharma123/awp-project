@@ -146,5 +146,22 @@ hr {
     background-color: #fceef5;
 }
 .not-found{
-    margin-top:50%;
+   
 }
+/****Styling for job view details Page*/
+.ViewDetails{
+    margin-top:10px;
+    padding:30px;
+    border:1px solid red;
+}
+.ApplyButton{
+    text-align:center;
+    padding:10px;
+    margin-top:100px;
+
+}
+.view-details-job-title{
+    text-align:center;
+
+}
+/************************************************/

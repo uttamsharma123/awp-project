@@ -11,22 +11,15 @@ namespace AwP_Project
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        string Category = "", Location = "";
-        List<string> LJobTitle = new List<string>();
-        List<string> LCompanyName = new List<string>();
-        List<string> LAddress = new List<string>();
-        List<string> LStartDate = new List<string>();
-        List<string> LSalary = new List<string>();
-        List<string> LApplyDate = new List<string>();
-        List<string> LDescription = new List<string>();
+        string Category = "", Location = "", JOBID="";
+        int jobId = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
-                Panel1.Visible = false;
-                Panel2.Visible = false;
-                Panel3.Visible =true;
+
+                Panel3.Visible = false;
                 string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
                 using(SqlConnection con=new SqlConnection(CS))
                 {
@@ -74,6 +67,10 @@ namespace AwP_Project
            
         }
 
+       
+
+       
+
         protected void Button1_Click(object sender, EventArgs e)
         {
            
@@ -94,56 +91,63 @@ namespace AwP_Project
                 cmd1.CommandText = "Select * from Jobs where JobType='" + Category + "' and Address='" + Location + "'";
                 cmd1.Connection = con;
                 con.Open();
-                 SqlDataReader rdr = cmd1.ExecuteReader();
-              
-
+                SqlDataReader rdr = cmd1.ExecuteReader();
+               
                 while (rdr.Read())
                 {
+                    jobId = rdr.GetInt32(0);
+                  
+                    JobTitle.Text = rdr.GetString(1);
+                    Address.Text = rdr.GetString(3);
+                    CompanyName.Text = rdr.GetString(2);
+                    StartDate.Text = rdr.GetString(4);
+                    Salary.Text = Convert.ToString(rdr.GetSqlMoney(5));
+                    ApplyDate.Text = Convert.ToString(rdr.GetDateTime(6));
 
-                    LJobTitle.Add(rdr.GetString(1));
-                    LCompanyName.Add(rdr.GetString(2));
-                    LAddress.Add(rdr.GetString(3));
-                    LStartDate.Add(rdr.GetString(4));
-                   // LSalary.Add(rdr.GetString(5));
-                   // LApplyDate.Add(rdr.GetString(6));
-                   // LDescription.Add(rdr.GetString(7));
-
-
-                }
-                 
-                if(LJobTitle.Count==2)
-                {
-                    JobTitle.Text = LJobTitle[0];
-                    JobTitle1.Text = LJobTitle[1];
-                   
-                    Panel1.Visible = true;
-                    Panel2.Visible = true;
-                    Panel3.Visible = false;
 
                 }
-                if(LJobTitle.Count==1)
+                if(jobId==0)
                 {
-                    JobTitle.Text = LJobTitle[0];
-                    Panel1.Visible = true;
+                    Panel1.Visible = false;
                     Panel2.Visible = false;
                     Panel3.Visible = true;
                 }
-                if(LJobTitle.Count!=2 && LJobTitle.Count!=1)
+                else
                 {
-                    Response.Write("Jobs Not Available");
-                    Panel1.Visible = false;
-                    Panel2.Visible = false;
-                    TitlePanel.Visible = true;
-                    Label1.Text = "Jobs Not Found ";
-                  
+                    Panel1.Visible = true;
+                    Panel2.Visible = true;
+                    Panel3.Visible = false;
                 }
-
-             
-
-
             }
+
+            JobTitle12.Text = "In " + LocationDropDownList.SelectedItem.Text;//this is used to show in which location jobs are available
+
+           // Response.Redirect("~/ViewDetails.aspx?JobId=" + JOBID);
+
+
+
+
+
+
+        }
+        protected void ViewDetails_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd1 = new SqlCommand();
+                cmd1.CommandText = "Select * from Jobs where JobType='" + CategoryDropDown.SelectedItem.Text + "' and Address='" +LocationDropDownList.SelectedItem.Text + "'";
+                cmd1.Connection = con;
+                con.Open();
+                SqlDataReader rdr = cmd1.ExecuteReader();
+                while(rdr.Read())
+                {
+                    JOBID =Convert.ToString( rdr.GetInt32(0));
+                }
+            }
+            Response.Redirect("~/ViewDetails.aspx?JobId=" + JOBID);
+
         }
     }
-   // Business Development Associate
-       // Associate Accountant
-}
+    }
+   

@@ -16,17 +16,18 @@
             </asp:DropDownList>
             <br />
             <br />
-            <asp:Button ID="Button1" Font-Size="20px" runat="server" BackColor="#F6830F" ForeColor="White" Height="35px" Text="Search" Width="252px" OnClick="Button1_Click" />
+            <asp:Button ID="Button1" Font-Size="20px" runat="server" BackColor="#F6830F" ForeColor="White" Height="35px" Text="Search" Width="252px" OnClick="Button1_Click" CausesValidation="False" EnableViewState="False" />
         </div>
     </div>
 
-    <div class="auto-style4 main-div" style="width: 604px; left: 322px; top: -26%; height: 734px;">
+    <div class="auto-style4 main-div" style="width: 604px; left: 322px; top: -26%; height: 650px;">
         <div class="jobs-available" style="height: 720px; width: 579px; margin-left: 23px;">
             <h3 class="job-title">
-                <asp:Label ID="Label1" runat="server" Text="Jobs in Mumbai"></asp:Label>
+                Jobs
+                <asp:Label  ID="JobTitle12" runat="server" Text=""></asp:Label>
             </h3>
             <hr />
-              <asp:Panel ID="Panel2" runat="server">
+              <asp:Panel ID="Panel2"  runat="server">
             
             <div class="jobs">
                 <div class="job-details">
@@ -53,12 +54,12 @@
                     </ul>
 
                     <p class="view-details">
-                        <asp:HyperLink ID="HyperLink1" runat="server">View Details ></asp:HyperLink>
+                        <asp:Button ID="ViewDetails" runat="server" BackColor="Blue" BorderColor="White" ForeColor="White" OnClick="ViewDetails_Click" Text="ViewDetails" />
                     </p>
                 </div>
             </div>
              </asp:Panel>
-               <asp:Panel ID="Panel1" runat="server" style="margin-top: 50px">
+               <asp:Panel ID="Panel1" runat="server"  style="margin-top: 50px">
             
             <div class="jobs">
                 <div class="job-details">
@@ -87,9 +88,9 @@
             </div>
              </asp:Panel>
             <asp:Panel ID="Panel3" runat="server">
-              <img class="not-found" src="Images/NotFound.png" alt="Not Found" style="width: 237px; height: 228px; margin-left: 161px"/>
-           <h1 style="height: 51px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jobs Not Found </h1>
-            </asp:Panel>
+              <img class="not-found" src="Images/NotFound.png" alt="Not Found" style="width: 237px;  margin-left: 161px"/>
+           <h1 style="height: 42px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jobs Not Found </h1>
+                &nbsp;</asp:Panel>
 
 
          

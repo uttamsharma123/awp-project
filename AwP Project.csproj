@@ -73,6 +73,7 @@
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="findJobPage.aspx" />
+    <Content Include="ViewDetails.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainPage.Master.cs">
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="findJobPage.aspx.designer.cs">
       <DependentUpon>findJobPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
