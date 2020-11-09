@@ -11,6 +11,8 @@ namespace AwP_Project
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+        string Category = "", Location = "";
+        string title="";
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -59,14 +61,52 @@ namespace AwP_Project
 
         protected void CategoryDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CategoryDropDown.SelectedValue!="-1")
+           
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+           
+            if(CategoryDropDown.SelectedItem.Value != "-1")
             {
-                Label4.Text = "hi";
+                Category=CategoryDropDown.SelectedItem.Text;
+
             }
-            else
+            if(LocationDropDownList.SelectedValue!="-1")
             {
-                Label4.Text = "Mumbai";
+                Location = LocationDropDownList.SelectedItem.Text;
+            }
+            string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                // Response.Write("Category =" + Category + "<BR> Location " + Location);
+                SqlCommand cmd1 = new SqlCommand();
+                cmd1.CommandText = "Select * from Jobs where JobType='" + Category + "' and Address='" + Location + "'";
+                cmd1.Connection = con;
+                con.Open();
+                 SqlDataReader rdr = cmd1.ExecuteReader();
+                while(rdr.Read())
+                {
+
+                  title=rdr.GetString(1);
+                }
+                if(title=="")
+                {
+                    Panel1.Visible = false;
+                    Panel2.Visible = false;
+
+                }
+                else
+                {
+                    Label2.Text = title;
+                    Panel1.Visible = true;
+                    Panel2.Visible = true;
+
+                }
+               
             }
         }
     }
+   // Business Development Associate
+       // Associate Accountant
 }

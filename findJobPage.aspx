@@ -8,17 +8,15 @@
         <div class="drop-down-filter">
             <h3 class="filters" style="height: 21px">Filters</h3>
             <p class="filter-title">Category</p>
-            <asp:DropDownList ID="CategoryDropDown"  runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="CategoryDropDown_SelectedIndexChanged">
-                <asp:ListItem>Marketing</asp:ListItem>
+            <asp:DropDownList ID="CategoryDropDown"  runat="server" Font-Size="15px" Height="25px" Style="margin-left: 0px" Width="250px" OnSelectedIndexChanged="CategoryDropDown_SelectedIndexChanged">
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <p class="filter-title">Location</p>
-            <asp:DropDownList ID="LocationDropDownList" runat="server" Font-Size="17px" Height="25px" Style="margin-left: 0px" Width="250px">
-                <asp:ListItem>Mumbai</asp:ListItem>
+            <asp:DropDownList ID="LocationDropDownList" runat="server" Font-Size="15px" Height="25px" Style="margin-left: 0px" Width="250px">
             </asp:DropDownList>
             <br />
             <br />
-            <asp:Button ID="Button1" Font-Size="20px" runat="server" BackColor="#F6830F" ForeColor="White" Height="35px" Text="Search" Width="252px" />
+            <asp:Button ID="Button1" Font-Size="20px" runat="server" BackColor="#F6830F" ForeColor="White" Height="35px" Text="Search" Width="252px" OnClick="Button1_Click" />
         </div>
     </div>
 
@@ -28,7 +26,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Mumbai"></asp:Label>
             </h3>
             <hr />
-            
+            <asp:Panel ID="Panel1" runat="server">
             <div class="jobs">
                 <div class="job-details">
                     <h2 class="find-job-title">
@@ -57,7 +55,10 @@
                     </p>
                 </div>
             </div>
-             <div class="jobs">
+             </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server">
+            
+            <div class="jobs">
                 <div class="job-details">
                     <h2 class="find-job-title">
                         <asp:Label ID="Label9" runat="server" Text="Business Development Associate"></asp:Label></h2>
@@ -85,6 +86,7 @@
                     </p>
                 </div>
             </div>
+             </asp:Panel>
 
 
         </div>
