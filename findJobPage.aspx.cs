@@ -12,11 +12,21 @@ namespace AwP_Project
     public partial class WebForm2 : System.Web.UI.Page
     {
         string Category = "", Location = "";
-        string title="";
+        List<string> LJobTitle = new List<string>();
+        List<string> LCompanyName = new List<string>();
+        List<string> LAddress = new List<string>();
+        List<string> LStartDate = new List<string>();
+        List<string> LSalary = new List<string>();
+        List<string> LApplyDate = new List<string>();
+        List<string> LDescription = new List<string>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
+                Panel1.Visible = false;
+                Panel2.Visible = false;
+                Panel3.Visible =true;
                 string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
                 using(SqlConnection con=new SqlConnection(CS))
                 {
@@ -85,25 +95,52 @@ namespace AwP_Project
                 cmd1.Connection = con;
                 con.Open();
                  SqlDataReader rdr = cmd1.ExecuteReader();
-                while(rdr.Read())
+              
+
+                while (rdr.Read())
                 {
 
-                  title=rdr.GetString(1);
-                }
-                if(title=="")
-                {
-                    Panel1.Visible = false;
-                    Panel2.Visible = false;
+                    LJobTitle.Add(rdr.GetString(1));
+                    LCompanyName.Add(rdr.GetString(2));
+                    LAddress.Add(rdr.GetString(3));
+                    LStartDate.Add(rdr.GetString(4));
+                   // LSalary.Add(rdr.GetString(5));
+                   // LApplyDate.Add(rdr.GetString(6));
+                   // LDescription.Add(rdr.GetString(7));
+
 
                 }
-                else
+                 
+                if(LJobTitle.Count==2)
                 {
-                    Label2.Text = title;
+                    JobTitle.Text = LJobTitle[0];
+                    JobTitle1.Text = LJobTitle[1];
+                   
                     Panel1.Visible = true;
                     Panel2.Visible = true;
+                    Panel3.Visible = false;
 
                 }
-               
+                if(LJobTitle.Count==1)
+                {
+                    JobTitle.Text = LJobTitle[0];
+                    Panel1.Visible = true;
+                    Panel2.Visible = false;
+                    Panel3.Visible = true;
+                }
+                if(LJobTitle.Count!=2 && LJobTitle.Count!=1)
+                {
+                    Response.Write("Jobs Not Available");
+                    Panel1.Visible = false;
+                    Panel2.Visible = false;
+                    TitlePanel.Visible = true;
+                    Label1.Text = "Jobs Not Found ";
+                  
+                }
+
+             
+
+
             }
         }
     }
