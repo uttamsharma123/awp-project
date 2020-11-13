@@ -19,7 +19,7 @@ namespace AwP_Project
         }
 
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Ok_Click(object sender, EventArgs e)
         {
 
             try
@@ -30,7 +30,7 @@ namespace AwP_Project
                 // con.Close();
                 Response.Write("<script>alert'Registered Successfully')</script>");
                 //SqlConnection con = new SqlConnection("Data Source=DESKTOP-64FVPV9;Initial Catalog=registration;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("INSERT  INTO users VALUES('" + Username.Text + "', '" + FullName.Text + "','" + Password.Text + "','" + ConfirmPassword.Text + "','" + Gmail.Text + "','" + CountryDropDownList1.SelectedItem.Text + "','" +""+ "')", con);
+                SqlCommand cmd = new SqlCommand("INSERT  INTO users VALUES('" + Username.Text + "', '" + FullName.Text + "','" + Password.Text + "','" + ConfirmPassword.Text + "','" + Gmail.Text + "')", con);
 
 
                 cmd.ExecuteNonQuery();

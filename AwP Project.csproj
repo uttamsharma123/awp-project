@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\NotFound.png" />
+    <Content Include="Images\PassIcon.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\UserIcon2.png" />
     <Content Include="main.css" />
     <Content Include="MainPage.aspx" />
     <Content Include="RegisterPage.aspx" />
