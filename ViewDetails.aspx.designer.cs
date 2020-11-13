@@ -78,13 +78,31 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.Label ApplyDate;
 
         /// <summary>
-        /// DetailsDescription control.
+        /// CompanyName1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DetailsDescription;
+        protected global::System.Web.UI.WebControls.Label CompanyName1;
+
+        /// <summary>
+        /// AboutCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AboutCompany;
+
+        /// <summary>
+        /// SkillRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SkillRequired;
 
         /// <summary>
         /// ApplyNowBtn control.

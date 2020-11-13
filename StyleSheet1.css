@@ -1,0 +1,219 @@
+﻿/*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.register {
+    background: #2d85b0;
+    height: 550px;
+    width: 1050px;
+    margin: 0px 0px 0px 0px;
+    color: white;
+    font-size: 20;
+    margin-left: 150px;
+}
+*/
+/****Done Csss by my self*/
+.main{
+    width:800px;
+  
+    border:1px solid red;
+    background-color:#fff;
+    
+}
+
+.register-container{
+   color:red;
+}
+.lbl{
+    color:red;
+
+}
+.items{
+    margin:20px;
+}
+
+label {
+    color: #000;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin:50px;
+    text-align:left;
+}
+.buttons {
+    text-align: center;
+    margin:10px;
+  
+    padding:10px;
+}
+.btn{
+    margin-left:20px;
+
+}
+.btn:hover{
+    color:black;
+    background-color:grey;
+}
+.text-box{
+    margin-left:20%;
+}
+.radion-btn{
+    margin-left:20px;
+} 
+
+
+.margin-style{
+    margin-left:30px;
+}
+.center-content{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+h1 {
+    text-align: center;
+    background-color: #9088d4;
+    color:white;
+}
+/*******************************************************************/
+
+
+
+
+
+
+/*
+
+#register {
+    margin-left: 50px;
+}
+
+
+#fname {
+    width: 360px;
+    font-size: 20px;
+    margin-left: 92px;
+}
+
+#uname {
+    width: 360px;
+    font-size: 20px;
+    height: 24px;
+    margin-left: 92px;
+    margin-top: 0px;
+}
+
+#pass {
+    width: 360px;
+    font-size: 20px;
+    margin-left: 94px;
+}
+
+#rpass {
+    width: 360px;
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+#email {
+    width: 357px;
+    font-size: 20px;
+    margin-left: 140px;
+}
+
+#mnumber {
+    width: 353px;
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+#register {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 1026px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0;
+}
+
+#reset {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 120px;
+    height: 40px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0;
+    margin-left: 35px;
+}
+
+#reg {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 120px;
+    height: 40px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0;
+}
+
+#update {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 86px;
+    height: 40px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0;
+    margin-left: 47px;
+}
+
+#delete {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 120px;
+    height: 40px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0;
+    margin-left: 43px;
+}
+    */

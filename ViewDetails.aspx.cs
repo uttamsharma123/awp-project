@@ -29,9 +29,14 @@ namespace AwP_Project
                     JobTitle.Text = rdr.GetString(1);
                     Address.Text = rdr.GetString(3);
                     CompanyName.Text = rdr.GetString(2);
+                    CompanyName1.Text = rdr.GetString(2);
+
                     StartDate.Text = rdr.GetString(4);
                     Salary.Text = Convert.ToString(rdr.GetSqlMoney(5));
                     ApplyDate.Text = Convert.ToString(rdr.GetDateTime(6));
+                    AboutCompany.Text = rdr.GetString(9);
+                    SkillRequired.Text = rdr.GetString(10);
+
                 }
             }
         }
