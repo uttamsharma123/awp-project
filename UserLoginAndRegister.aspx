@@ -39,13 +39,19 @@
             margin-left: 5px;
         }
                 
+        .auto-style19 {
+            color: black;
+            text-align: center;
+            height: 37px;
+        }
+                
         </style>
 </head>
 <body>
       <form id="RegisterForm"  runat="server">
          
    <!--this is for Registration Panel -->
-          <asp:Panel ID="Panel1"  Visible="false" runat="server">
+          <asp:Panel ID="RegisterPanel"  Visible="false" runat="server">
       <h1>Registration Form</h1>
     
           <div class="center-content">
@@ -94,7 +100,7 @@
                    
                     <div class="items">
                         <p class="buttons">
-                            <asp:Button ID="RegisterBtn"  runat="server" Text="Register" Font-Size="20px" OnClick="Button1_Click" Width="102px" BackColor="#F6830F" CssClass="ok-btn btn" ForeColor="White" />
+                            <asp:Button ID="RegisterBtn"  runat="server" Text="Register" Font-Size="20px" Width="102px" BackColor="#F6830F" CssClass="ok-btn btn" ForeColor="White" />
                         
                             <asp:Button ID="ResetBtn" Font-Size="20px" runat="server" Text="Reset"  font-siOnClick="Button2_Click" CausesValidation="False" BackColor="#F6830F" ForeColor="White" CssClass="ok-btn btn " Width="97px" />
 
@@ -102,6 +108,8 @@
                         
 
                     </div>
+                    <p class="auto-style19">Already Registered? <asp:LinkButton CssClass="sign-up" ID="RegisterLinkButton2" runat="server" OnClick="RegisterLinkButton_Click" CausesValidation="False">Login now</asp:LinkButton>
+                    </p>
                 </div>
             </div>
 
@@ -156,6 +164,8 @@
                         
 
                     </div>
+                    <p class="not-register">Not Registered? <asp:LinkButton CssClass="sign-up" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CausesValidation="False">Signup now</asp:LinkButton>
+                    </p>
                 </div>
             </div>
 

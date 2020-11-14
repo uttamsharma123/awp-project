@@ -24,13 +24,13 @@ namespace AwP_Project
         protected global::System.Web.UI.HtmlControls.HtmlForm RegisterForm;
 
         /// <summary>
-        /// Panel1 control.
+        /// RegisterPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel RegisterPanel;
 
         /// <summary>
         /// FullName control.
@@ -159,6 +159,15 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.Button ResetBtn;
 
         /// <summary>
+        /// RegisterLinkButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton RegisterLinkButton2;
+
+        /// <summary>
         /// LoginPanel control.
         /// </summary>
         /// <remarks>
@@ -238,5 +247,14 @@ namespace AwP_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LoginButton1;
+
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

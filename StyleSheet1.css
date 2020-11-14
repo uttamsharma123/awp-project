@@ -93,10 +93,12 @@ h1 {
    
 }
 .login-button{
-    margin-top:50px;
+    margin-top:30px;
 }
 .ok-btn{
     border:none;
+    padding:5px;
+    border-radius:10px;
 }
 .ok-btn:hover{
     color:red;
@@ -105,6 +107,14 @@ h1 {
     margin:37%;
   
 }
+.not-register{
+    color:black;
+    text-align:center;
+}
+.sign-up{
+    text-decoration:none;
+}
+
 /*******************************************************************/
 
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -19,65 +20,65 @@ namespace AwP_Project
         }
 
 
-        protected void Ok_Click(object sender, EventArgs e)
+       protected void Ok_Click(object sender, EventArgs e)
         {
 
-            try
+            string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-64FVPV9;Initial Catalog=registration;Integrated Security=True");
-
+                SqlCommand cmd1 = new SqlCommand();
+                cmd1.CommandText = "select * from users where Username='" + LoginUsername.Text + "' and Password='" + LoginPassword.Text + "'";
+                cmd1.Connection = con;
                 con.Open();
-                // con.Close();
-                Response.Write("<script>alert'Registered Successfully')</script>");
-                //SqlConnection con = new SqlConnection("Data Source=DESKTOP-64FVPV9;Initial Catalog=registration;Integrated Security=True");
-                SqlCommand cmd = new SqlCommand("INSERT  INTO users VALUES('" + Username.Text + "', '" + FullName.Text + "','" + Password.Text + "','" + ConfirmPassword.Text + "','" + Gmail.Text + "')", con);
+                SqlDataReader rdr = cmd1.ExecuteReader();
 
-
-                cmd.ExecuteNonQuery();
-                Response.Write("Registered Successfully");
-               
-               /* TextBox2.Text = "";
-                TextBox4.Text = "";
-                TextBox5.Text = "";
-                TextBox6.Text = "";
-                DropDownList1.SelectedIndex = 0;
-                RadioButtonList1.SelectedIndex = 0;*/
-
+                string fullname = "";
+                while (rdr.Read())
+                {
+                    fullname = rdr.GetString(1);
+                }
+                if(fullname=="")
+                {
+                    Response.Write("<script>alert('Username or Password incorrect')</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Logged In Sucessfully')</script>");
+                    Response.Redirect("~/findJobPage.aspx");
+                }
             }
-            catch (Exception)
+            }
+
+
+
+
+
+    
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            LoginPanel.Visible = false;
+            RegisterPanel.Visible = true;
+        }
+
+        protected void RegisterLinkButton_Click(object sender, EventArgs e)
+        {
+            LoginPanel.Visible = true;
+            RegisterPanel.Visible = false;
+        }
+
+        protected void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
             {
-                Response.Write("User Already Exists");
-
-
+                SqlCommand cmd1 = new SqlCommand();
+                cmd1.CommandText = "Insert into users values('" + FullName.Text + "','" + Username.Text + "','" + Password.Text + "','" + Gmail.Text + "')";
+                cmd1.Connection = con;
+                con.Open();
+                int i = cmd1.ExecuteNonQuery();
+                Response.Write(i + " row[s] inserted ");
             }
-
-
-
-
-
         }
-
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-           /* TextBox3.Text = "";
-            TextBox1.Text = "";
-            TextBox2.Text = "";
-            TextBox4.Text = "";
-            TextBox5.Text = "";
-            TextBox6.Text = "";
-            DropDownList1.SelectedIndex = 0;
-            RadioButtonList1.SelectedIndex = -1;*/
-
-        }
-
-        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            gender = "male";
-            gender = "female";
-            gender = "others";
-        }
-
-       
     }
 }

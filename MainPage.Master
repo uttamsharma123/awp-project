@@ -39,6 +39,7 @@
                                 <asp:HyperLink class="link" ID="HyperLink2" runat="server" NavigateUrl="~/findJobPage.aspx">Search Jobs</asp:HyperLink>
 
                             </li>
+
                         </ul>
 
                     </div>
