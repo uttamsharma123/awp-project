@@ -1,0 +1,24 @@
+﻿body {
+}
+.center-content {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    width:100%;
+    border: 1px solid #F6830F;
+    background-color: #fff;
+    padding:10px;
+}
+.profile-btn{
+    text-align:right;
+}
+.btn {
+    margin: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}

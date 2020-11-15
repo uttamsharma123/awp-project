@@ -59,34 +59,7 @@
                 </div>
             </div>
              </asp:Panel>
-               <asp:Panel ID="Panel1" runat="server"  style="margin-top: 50px">
-            
-            <div class="jobs">
-                <div class="job-details">
-                    <h2 class="find-job-title">
-                        <asp:Label ID="JobTitle1" runat="server" Text="Business Development Associate"></asp:Label></h2>
-
-                    <small>Company Name-
-                    <asp:Label ID="CompanyName1" runat="server" Text="BYJU'S The Learning App"></asp:Label></small>
-                    <p>
-                        Address-
-                    <asp:Label ID="Address1" runat="server" Text="Mumbai"></asp:Label>
-                    </p>
-                    <ul>
-                        <li>Start Date-<asp:Label ID="StartDate1" runat="server" Text="Immediately"></asp:Label></li>
-                        <li>Salary Rs.-
-                        <asp:Label ID="Salary1" runat="server" Text="10000"></asp:Label></li>
-                        <li>Apply Date- 
-                        <asp:Label ID="ApplyDate1" runat="server" Text="11 Nov 20"></asp:Label>
-                        </li>
-                    </ul>
-
-                    <p class="view-details">
-                        <asp:HyperLink ID="HyperLink2" runat="server">View Details ></asp:HyperLink>
-                    </p>
-                </div>
-            </div>
-             </asp:Panel>
+              
             <asp:Panel ID="Panel3" runat="server">
               <img class="not-found" src="Images/NotFound.png" alt="Not Found" style="width: 237px;  margin-left: 161px"/>
            <h1 style="height: 42px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jobs Not Found </h1>

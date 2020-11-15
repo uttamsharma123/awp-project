@@ -64,7 +64,7 @@
 
 
                         <label>FullName : </label>
-                        <asp:TextBox ID="FullName" Font-Size="15px" Height="25px" runat="server" Width="210px" CssClass="auto-style11  text-box" style="margin-left: 108px"></asp:TextBox>
+                        <asp:TextBox ID="FullName" Font-Size="15px" Height="25px" runat="server" Width="210px" CssClass="auto-style11  text-box" style="margin-left: 114px"></asp:TextBox>
                         <asp:RequiredFieldValidator Font-Size="15px" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter your name" ControlToValidate="FullName" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                     <div  class="items">

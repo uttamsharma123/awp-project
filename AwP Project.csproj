@@ -72,15 +72,14 @@
     <Content Include="Images\user.png" />
     <Content Include="Images\UserIcon2.png" />
     <Content Include="main.css" />
+    <Content Include="ProfileStyle.css" />
     <Content Include="UserLoginAndRegister.aspx" />
     <Content Include="SearchJobPage.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
-    <Content Include="Home.aspx" />
+    <Content Include="ProfilePage.aspx" />
     <Content Include="findJobPage.aspx" />
     <Content Include="ViewDetails.aspx" />
-    <Content Include="LoginPage.aspx" />
-    <Content Include="RegisterPage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainPage.Master.cs">
@@ -105,12 +104,12 @@
     <Compile Include="SearchJobPage.aspx.designer.cs">
       <DependentUpon>SearchJobPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="ProfilePage.aspx.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="ProfilePage.aspx.designer.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="findJobPage.aspx.cs">
       <DependentUpon>findJobPage.aspx</DependentUpon>
@@ -125,20 +124,6 @@
     </Compile>
     <Compile Include="ViewDetails.aspx.designer.cs">
       <DependentUpon>ViewDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RegisterPage.aspx.cs">
-      <DependentUpon>RegisterPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RegisterPage.aspx.designer.cs">
-      <DependentUpon>RegisterPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

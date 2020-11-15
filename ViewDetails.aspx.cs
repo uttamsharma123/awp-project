@@ -14,7 +14,10 @@ namespace AwP_Project
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            int jobId = Convert.ToInt32(Request.QueryString["JobId"]);
+            int jobId = Convert.ToInt32(Request.QueryString["JobId"]);//this jobid is comming from findjobpage when user will click on view details then that come in the form of query string ?JobI=""
+
+         
+         
             string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {

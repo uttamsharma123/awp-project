@@ -52,8 +52,8 @@ E:\Awp Project\AwP Project\bin\roslyn\VBCSCompiler.exe
 E:\Awp Project\AwP Project\bin\roslyn\VBCSCompiler.exe.config
 E:\Awp Project\AwP Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Awp Project\AwP Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Awp Project\AwP Project\obj\Debug\AwP Project.csprojAssemblyReference.cache
 E:\Awp Project\AwP Project\obj\Debug\AwP Project.csproj.CoreCompileInputs.cache
 E:\Awp Project\AwP Project\obj\Debug\AwP Project.csproj.CopyComplete
 E:\Awp Project\AwP Project\obj\Debug\AwP Project.dll
 E:\Awp Project\AwP Project\obj\Debug\AwP Project.pdb
+E:\Awp Project\AwP Project\obj\Debug\AwP Project.csprojAssemblyReference.cache

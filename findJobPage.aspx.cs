@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -108,13 +109,14 @@ namespace AwP_Project
                 }
                 if(jobId==0)
                 {
-                    Panel1.Visible = false;
+                   
+
                     Panel2.Visible = false;
                     Panel3.Visible = true;
                 }
                 else
                 {
-                    Panel1.Visible = true;
+                  
                     Panel2.Visible = true;
                     Panel3.Visible = false;
                 }
@@ -122,7 +124,7 @@ namespace AwP_Project
 
             JobTitle12.Text = "In " + LocationDropDownList.SelectedItem.Text;//this is used to show in which location jobs are available
 
-           // Response.Redirect("~/ViewDetails.aspx?JobId=" + JOBID);
+         ///  Response.Redirect("~/ViewDetails.aspx?JobId=" + JOBID);
 
 
 
@@ -145,6 +147,7 @@ namespace AwP_Project
                     JOBID =Convert.ToString( rdr.GetInt32(0));
                 }
             }
+           
             Response.Redirect("~/ViewDetails.aspx?JobId=" + JOBID);
 
         }

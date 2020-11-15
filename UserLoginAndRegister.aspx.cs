@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,7 +17,12 @@ namespace AwP_Project
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                Page LoginPage = (Page)Context.Handler;
 
+
+            }
         }
 
 
@@ -32,19 +38,25 @@ namespace AwP_Project
                 con.Open();
                 SqlDataReader rdr = cmd1.ExecuteReader();
 
-                string fullname = "";
+                string Username = "";
+                string UserName1 = "";
                 while (rdr.Read())
                 {
-                    fullname = rdr.GetString(1);
+                    Username = rdr.GetString(1);
+                   
                 }
-                if(fullname=="")
+                if(Username == "")
                 {
                     Response.Write("<script>alert('Username or Password incorrect')</script>");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Logged In Sucessfully')</script>");
+                    //Response.Write("<script>alert('Logged In Sucessfully')</script>");
+                    HttpCookie cookie = new HttpCookie("UserInfo");
+                    cookie["username"] = Username;
+                    Response.Cookies.Add(cookie);
                     Response.Redirect("~/findJobPage.aspx");
+                    
                 }
             }
             }
