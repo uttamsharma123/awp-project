@@ -21,4 +21,19 @@
     border: none;
     padding: 5px;
     border-radius: 10px;
+   background-color: #F6830F;
+   color:white;
+}
+.label{
+    margin:10px;
+    color
+}
+.asp-label{
+    color:red;
+}
+.txt-box{
+    width:200px;
+    height:30px;
+    font-size:15px;
+    color:red;
 }
