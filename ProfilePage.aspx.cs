@@ -19,6 +19,7 @@ namespace AwP_Project
             if (!IsPostBack)
             {
                 Calendar1.Visible = false;
+                DropDownList1.Visible = false;
             }
 
             HttpCookie cookie = Request.Cookies["UserInfo"];
@@ -82,8 +83,8 @@ namespace AwP_Project
                     con.Open();
                     int i = cmd1.ExecuteNonQuery();
 
-                    //Response.Redirect("~/UserLoginAndRegister.aspx");
-                    Response.Write("one user is updated");
+                    Response.Redirect("~/ProfilePage.aspx");
+                   // Response.Write("one user is updated");
                 }
             }
         }
@@ -93,11 +94,13 @@ namespace AwP_Project
             if (Calendar1.Visible)
             {
                 Calendar1.Visible = false;
+                DropDownList1.Visible = false;
 
             }
             else
             {
                 Calendar1.Visible = true;
+                DropDownList1.Visible = true;
             }
         }
 
@@ -105,11 +108,23 @@ namespace AwP_Project
         {
            DOBTextBox.Text= Calendar1.SelectedDate.ToShortDateString();
             Calendar1.Visible = false;
+            DropDownList1.Visible = false;
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
         {
            
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue!="-1")
+            {
+
+                int year = Convert.ToInt32(DropDownList1.SelectedItem.Text);
+                Calendar1.VisibleDate = new DateTime(year, 1, 1);
+
+            }
         }
     }
 }

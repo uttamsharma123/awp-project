@@ -32,6 +32,12 @@ h1{
     align-items:center;
     margin:auto;
 }
+
+.title-nav {
+    background-color: #9088d4;
+    padding: 10px;
+    text-align: center;
+}
 /**********************************************************/
 .auto-style1 {
     width: 698px;
@@ -48,7 +54,8 @@ h1{
 }
 
 .auto-style4 {
-    width: 48px;
+    width: 75px;
+    
 }
 
 .auto-style5 {

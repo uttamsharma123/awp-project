@@ -24,13 +24,13 @@ namespace AwP_Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// HyperLink1 control.
+        /// ProfileHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink ProfileHyperLink;
 
         /// <summary>
         /// HyperLink2 control.
@@ -42,13 +42,13 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
 
         /// <summary>
-        /// GetUserName control.
+        /// logout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GetUserName;
+        protected global::System.Web.UI.WebControls.Button logout;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

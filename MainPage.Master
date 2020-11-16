@@ -14,15 +14,25 @@
         }
        
         .auto-style7 {
-            width: 138%;
+            width: 100%;
             height: 50px;
-            background-color: #9088D4;
+           
         }
        
-        .auto-style8 {
-            text-align: right;
-            color: red;
-            width: 436px;
+        .auto-style9 {
+            width: 825px;
+        }
+        .auto-style10 {
+            width: 825px;
+            height: 100%;
+        }
+        .auto-style11 {
+            width: 936px;
+        }
+       
+        .auto-style12 {
+            margin-top: 0px;
+            margin-left: 0px;
         }
        
     </style>
@@ -34,22 +44,22 @@
 </head>
 <body style="width: 1025px">
     <form id="form1" runat="server">
-        <table>
+        <table class="auto-style11">
             <tr>
-                <td class="auto-style1" colspan="12">
+                <td class="auto-style9" colspan="12">
                     <div class="margin-nav auto-style7">
                         <ul>
-                            <li class=" li-link auto-style4">
-                                <asp:HyperLink class="link" ID="HyperLink1" runat="server" NavigateUrl="~/ProfilePage.aspx">Profile</asp:HyperLink>
+                            <li class="title-nav li-link auto-style4">
+                                <asp:HyperLink class="link" ID="ProfileHyperLink" runat="server" NavigateUrl="~/ProfilePage.aspx">UserProfile</asp:HyperLink>
                             </li>
-                            <li class=" li-link auto-style6">
+                            <li class=" title-nav li-link auto-style6">
                                 <asp:HyperLink class="link" ID="HyperLink2" runat="server" NavigateUrl="~/findJobPage.aspx">Search Jobs</asp:HyperLink>
 
                             </li>
-                            <li class="auto-style8 li-link">
-                            <asp:Label CssClass=" title-username" ForeColor="#ffffff" BorderColor="#ccff33" ID="GetUserName" runat="server" Text="Label"></asp:Label>
-
+                            <li class=" title-nav li-link auto-style6">
+                                <asp:Button ID="logout" Font-Size="20px" runat="server" ForeColor="White" BackColor="#9088d4" Text="Logout" CssClass="auto-style12" Height="26px" Width="107px" BorderStyle="None" OnClick="logout_Click" />
                             </li>
+                           
                         </ul>
                         
 
@@ -57,7 +67,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2" colspan="12">
+                <td class="auto-style10" colspan="12">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         
 

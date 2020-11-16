@@ -17,16 +17,21 @@ namespace AwP_Project
                 HttpCookie cookie = Request.Cookies["UserInfo"];
                 if(cookie!=null)
                 {
-                    GetUserName.Text = cookie["username"];
+                   ProfileHyperLink.Text = cookie["username"];
                 }
                 //if user is not authenticated then he will redirect to login page
-               /* else
+                else
                 {
                     Response.Redirect("~/UserLoginAndRegister.aspx");
-                }*/
+                }
             }
 
         }
-       
+
+        protected void logout_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["UserInfo"].Expires=DateTime.Now.AddDays(-1);
+            Response.Redirect("~/UserLoginAndRegister.aspx");
+        }
     }
 }

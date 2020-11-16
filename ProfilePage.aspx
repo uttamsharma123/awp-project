@@ -29,10 +29,10 @@
                            <p> 
                                &nbsp;</p> 
                               <p> 
-                               <asp:TextBox CssClass="txt-box"  ID="NameTextBox" runat="server"></asp:TextBox>
+                               <asp:TextBox CssClass="txt-box"  ID="NameTextBox" runat="server" Enabled="False"></asp:TextBox>
                            </p> 
                             <p>
-                            <asp:TextBox CssClass="txt-box" ID="GmailTextBox" runat="server"></asp:TextBox>
+                            <asp:TextBox CssClass="txt-box" ID="GmailTextBox" runat="server" Enabled="False"></asp:TextBox>
                            </p>
                             <p>
                                 <asp:RadioButtonList ID="GenderTextBox" runat="server" RepeatDirection="Horizontal" style="margin-left: 208px" Width="207px">
@@ -46,6 +46,23 @@
                                 &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="26px" ImageUrl="~/Images/calIcon.png" Width="30px" OnClick="ImageButton1_Click" />
                             </p>
                             <p>
+                                <asp:DropDownList Font-Size="15px" ID="DropDownList1" runat="server" Height="20px" style="margin-left: 0px" Width="207px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                                    <asp:ListItem Value="-1">Select Year Of DOB</asp:ListItem>
+                                    <asp:ListItem>1991</asp:ListItem>
+                                    <asp:ListItem>1992</asp:ListItem>
+                                    <asp:ListItem>1993</asp:ListItem>
+                                    <asp:ListItem>1994</asp:ListItem>
+                                    <asp:ListItem>1995</asp:ListItem>
+                                    <asp:ListItem>1996</asp:ListItem>
+                                    <asp:ListItem>1997</asp:ListItem>
+                                    <asp:ListItem>1998</asp:ListItem>
+                                    <asp:ListItem>1999</asp:ListItem>
+                                    <asp:ListItem>2000</asp:ListItem>
+                                    <asp:ListItem>2001</asp:ListItem>
+                                    <asp:ListItem>2002</asp:ListItem>
+                                </asp:DropDownList></p>
+                            <p>
+                                &nbsp;
                                 <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" style="margin-left: 198px; margin-top: 10px;" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" CellPadding="1" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" OnDayRender="Calendar1_DayRender" Width="220px">
                                     <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
                                     <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />

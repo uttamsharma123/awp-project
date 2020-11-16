@@ -39,7 +39,7 @@ namespace AwP_Project
                 SqlDataReader rdr = cmd1.ExecuteReader();
 
                 string Username = "";
-                string UserName1 = "";
+               
                 while (rdr.Read())
                 {
                     Username = rdr.GetString(1);
