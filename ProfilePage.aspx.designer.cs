@@ -114,13 +114,13 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.TextBox GmailTextBox;
 
         /// <summary>
-        /// GenderRadioButton control.
+        /// GenderTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList GenderRadioButton;
+        protected global::System.Web.UI.WebControls.RadioButtonList GenderTextBox;
 
         /// <summary>
         /// DOBTextBox control.

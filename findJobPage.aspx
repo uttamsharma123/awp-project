@@ -59,7 +59,9 @@
                 </div>
             </div>
              </asp:Panel>
-              
+               <asp:Panel ID="Panel1" runat="server">
+           <h2 style="height: 42px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please Search Jobs in Your Location </h2>
+                &nbsp;</asp:Panel>
             <asp:Panel ID="Panel3" runat="server">
               <img class="not-found" src="Images/NotFound.png" alt="Not Found" style="width: 237px;  margin-left: 161px"/>
            <h1 style="height: 42px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jobs Not Found </h1>

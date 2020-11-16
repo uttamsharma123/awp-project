@@ -34,7 +34,7 @@
                 <small class="small-tag"> <asp:Label ID="SkillRequired" runat="server" Text=""></asp:Label></small>
                 
                 <p class="ApplyButton">
-                    <asp:Button ID="ApplyNowBtn" Font-Size="16px" runat="server" Text="Apply Now" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White" />
+                    <asp:Button ID="ApplyNowBtn" Font-Size="16px" runat="server" Text="Apply Now" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White" OnClick="ApplyNowBtn_Click" />
                 </p>
                 
             </div>

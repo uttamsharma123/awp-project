@@ -43,5 +43,11 @@ namespace AwP_Project
                 }
             }
         }
+
+        protected void ApplyNowBtn_Click(object sender, EventArgs e)
+        {
+            Response.Write("<script>alert('We will inform you through your Email Thank You :)')</script>");
+           
+        }
     }
 }

@@ -42,10 +42,10 @@ namespace AwP_Project
                         GenderLabel1.Text = rdr.GetString(4);
                         getGen=rdr.GetString(4);
                         
-                        DOBLabel2.Text = rdr.GetString(7);// this is for profile step in wizard
-                        DOBTextBox.Text = rdr.GetString(7);//this is for update step in Wizard
+                       DOBLabel2.Text = rdr.GetString(7);// this is for profile step in wizard
+                      /// DOBTextBox.Text = rdr.GetString(7);//this is for update step in Wizard
                         AddressLabel3.Text = rdr.GetString(5);//this is profile step in wizard
-                        AddressTextBox.Text = rdr.GetString(5);//this is for update in wizard
+                      ///AddressTextBox.Text = rdr.GetString(5);//this is for update in wizard
 
 
 
@@ -77,12 +77,13 @@ namespace AwP_Project
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd1 = new SqlCommand();
-                    cmd1.CommandText = "update users set FullName='" + NameTextBox.Text + "',Gmail='"+GmailTextBox.Text+"',Gender='"+GenderRadioButton.SelectedItem.Text+"', DOB='"+DOBTextBox.Text+"',Address='"+AddressTextBox.Text+"' where Username='" + getUserName + "'";
+                    cmd1.CommandText = "update Users set FullName='" + NameTextBox.Text + "',Gmail='"+GmailTextBox.Text+"',Gender='"+GenderTextBox.SelectedItem.Text+"', DOB='"+DOBTextBox.Text+"',Address='"+AddressTextBox.Text+"' where Username='" + getUserName + "'";
                     cmd1.Connection = con;
                     con.Open();
                     int i = cmd1.ExecuteNonQuery();
-                    
-                    Response.Redirect("~/UserLoginAndRegister.aspx");
+
+                    //Response.Redirect("~/UserLoginAndRegister.aspx");
+                    Response.Write("one user is updated");
                 }
             }
         }
@@ -104,6 +105,11 @@ namespace AwP_Project
         {
            DOBTextBox.Text= Calendar1.SelectedDate.ToShortDateString();
             Calendar1.Visible = false;
+        }
+
+        protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
+        {
+           
         }
     }
 }

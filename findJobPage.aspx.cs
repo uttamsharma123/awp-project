@@ -21,6 +21,8 @@ namespace AwP_Project
             {
 
                 Panel3.Visible = false;
+                Panel2.Visible = false;
+                Panel1.Visible = true;
                 string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
                 using(SqlConnection con=new SqlConnection(CS))
                 {
@@ -113,12 +115,14 @@ namespace AwP_Project
 
                     Panel2.Visible = false;
                     Panel3.Visible = true;
+                    Panel1.Visible = false;
                 }
                 else
                 {
                   
                     Panel2.Visible = true;
                     Panel3.Visible = false;
+                    Panel1.Visible = false;
                 }
             }
 
