@@ -79,13 +79,16 @@ namespace AwP_Project
             RegisterPanel.Visible = false;
         }
 
-        protected void RegisterBtn_Click(object sender, EventArgs e)
+        
+
+        protected void RegisterBtn_Click1(object sender, EventArgs e)
         {
+
             string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
                 SqlCommand cmd1 = new SqlCommand();
-                cmd1.CommandText = "Insert into users values('" + FullName.Text + "','" + Username.Text + "','" + Password.Text + "','" + Gmail.Text + "')";
+                cmd1.CommandText = "Insert into users values('" + FullName.Text + "','" + Username.Text + "','" + Password.Text + "','" + Gmail.Text + "','','','','')";
                 cmd1.Connection = con;
                 con.Open();
                 int i = cmd1.ExecuteNonQuery();

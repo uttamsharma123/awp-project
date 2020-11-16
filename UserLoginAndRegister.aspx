@@ -100,7 +100,7 @@
                    
                     <div class="items">
                         <p class="buttons">
-                            <asp:Button ID="RegisterBtn"  runat="server" Text="Register" Font-Size="20px" Width="102px" BackColor="#F6830F" CssClass="ok-btn btn" ForeColor="White" />
+                            <asp:Button ID="RegisterBtn"  runat="server" Text="Register" Font-Size="20px" Width="102px" BackColor="#F6830F" CssClass="ok-btn btn" ForeColor="White" OnClick="RegisterBtn_Click1" />
                         
                             <asp:Button ID="ResetBtn" Font-Size="20px" runat="server" Text="Reset"  font-siOnClick="Button2_Click" CausesValidation="False" BackColor="#F6830F" ForeColor="White" CssClass="ok-btn btn " Width="97px" />
 

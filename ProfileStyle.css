@@ -1,5 +1,6 @@
 ﻿body {
 }
+
 .center-content {
     max-width: 700px;
     margin: auto;
@@ -7,33 +8,63 @@
     align-items: center;
     justify-content: center;
 }
+
 .main {
-    width:100%;
-    border: 1px solid #F6830F;
+    width: 100%;
     background-color: #fff;
-    padding:10px;
+    padding: 10px;
 }
-.profile-btn{
-    text-align:right;
+
+.profile-btn {
+    text-align: right;
 }
+
 .btn {
     margin: 10px;
     border: none;
     padding: 5px;
     border-radius: 10px;
-   background-color: #F6830F;
-   color:white;
+    background-color: #F6830F;
+    color: white;
 }
-.label{
-    margin:10px;
-    color
+
+.label {
+    margin: 10px;
 }
-.asp-label{
-    color:red;
+
+.asp-label {
+    color: red;
+    text-align: center;
 }
-.txt-box{
-    width:200px;
-    height:30px;
-    font-size:15px;
-    color:red;
+
+.txt-box {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    color: red;
+}
+
+.wizard {
+    text-align: center;
+}
+
+.para1 {
+    text-align: left;
+    margin-left: 100px;
+}
+
+.wizard-div {
+    margin: 100px;
+    padding: 10px;
+}
+
+h3 {
+    margin: 10px;
+    padding: 10px;
+    background-color: #F6830F;
+    color:white;
+}
+
+.view-details-job-title {
+    border: 1px solid #F6830F;
 }

@@ -60,6 +60,33 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.Label GmailLabel;
 
         /// <summary>
+        /// GenderLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GenderLabel1;
+
+        /// <summary>
+        /// DOBLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DOBLabel2;
+
+        /// <summary>
+        /// AddressLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AddressLabel3;
+
+        /// <summary>
         /// UpdateStep control.
         /// </summary>
         /// <remarks>
@@ -67,15 +94,6 @@ namespace AwP_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.WizardStep UpdateStep;
-
-        /// <summary>
-        /// UserNameTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
 
         /// <summary>
         /// NameTextBox control.
@@ -96,31 +114,49 @@ namespace AwP_Project
         protected global::System.Web.UI.WebControls.TextBox GmailTextBox;
 
         /// <summary>
-        /// CurrentTextBox3 control.
+        /// GenderRadioButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CurrentTextBox3;
+        protected global::System.Web.UI.WebControls.RadioButtonList GenderRadioButton;
 
         /// <summary>
-        /// NewPassTextBox4 control.
+        /// DOBTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NewPassTextBox4;
+        protected global::System.Web.UI.WebControls.TextBox DOBTextBox;
 
         /// <summary>
-        /// ConfirmPassTextBox5 control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassTextBox5;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+
+        /// <summary>
+        /// Calendar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+
+        /// <summary>
+        /// AddressTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AddressTextBox;
 
         /// <summary>
         /// UpdateSubmitButton control.

@@ -19,6 +19,12 @@
             background-color: #9088D4;
         }
        
+        .auto-style8 {
+            text-align: right;
+            color: red;
+            width: 436px;
+        }
+       
     </style>
 
     <link rel="stylesheet" href="main.css" />
@@ -31,7 +37,7 @@
         <table>
             <tr>
                 <td class="auto-style1" colspan="12">
-                    <div class="auto-style7">
+                    <div class="margin-nav auto-style7">
                         <ul>
                             <li class=" li-link auto-style4">
                                 <asp:HyperLink class="link" ID="HyperLink1" runat="server" NavigateUrl="~/ProfilePage.aspx">Profile</asp:HyperLink>
@@ -40,9 +46,12 @@
                                 <asp:HyperLink class="link" ID="HyperLink2" runat="server" NavigateUrl="~/findJobPage.aspx">Search Jobs</asp:HyperLink>
 
                             </li>
+                            <li class="auto-style8 li-link">
+                            <asp:Label CssClass=" title-username" ForeColor="#ffffff" BorderColor="#ccff33" ID="GetUserName" runat="server" Text="Label"></asp:Label>
 
+                            </li>
                         </ul>
-                        <asp:Label ID="GetUserName" runat="server" Text="Label"></asp:Label>
+                        
 
                     </div>
                 </td>

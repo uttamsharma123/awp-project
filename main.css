@@ -4,6 +4,7 @@
 h1{
     color:red;
 }
+/***this is for nav bar in masterpage*/
 .li-link{
     display:inline-block;
     margin:8px;
@@ -25,6 +26,13 @@ h1{
 .link:hover{
     color:black;
 }
+.margin-nav{
+    display:flex;
+    align-content:center;
+    align-items:center;
+    margin:auto;
+}
+/**********************************************************/
 .auto-style1 {
     width: 698px;
 }
