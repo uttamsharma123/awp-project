@@ -52,11 +52,13 @@
          
    <!--this is for Registration Panel -->
           <asp:Panel ID="RegisterPanel"  Visible="false" runat="server">
-      <h1>Registration Form</h1>
+                            
+      <h1>Welcome To Job Portal</h1>
     
           <div class="center-content">
          
      
+           
           
             <div class="main">
                 <div class="register-container">
@@ -122,12 +124,12 @@
    <!--this is for Login Panel -->
          
     <asp:Panel ID="LoginPanel" Visible="true" runat="server">
-          <h1>Login</h1>
+          <h1>Welcome to Job Portal</h1>
     <div class="center-content">
        
          
       
-           
+        
             <div class="main">
                     <asp:Image ID="Image3" runat="server" style="margin-top:20px" CssClass="auto-style17" Height="100px" ImageUrl="~/Images/user.png" />
 

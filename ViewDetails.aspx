@@ -33,12 +33,27 @@
                 <p>Skill Required</p>
                 <small class="small-tag"> <asp:Label ID="SkillRequired" runat="server" Text=""></asp:Label></small>
                 
-                <p class="ApplyButton">
-                    <asp:Button ID="ApplyNowBtn" Font-Size="16px" runat="server" Text="Apply Now" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White" OnClick="ApplyNowBtn_Click" />
+                 <p class="ApplyButton">
+                    <asp:Button ID="ApplyNowBtn" Font-Size="16px" runat="server" Text="Apply Now" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White" OnClick="ApplyNowBtn_Click" Width="122px" />
+                
+               
+                    <asp:Button ID="CancelButton" Font-Size="16px" runat="server" Text="Cancel" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White" style="margin-left: 24px" OnClick="CancelButton_Click" />
                 </p>
                 
             </div>
         </asp:Panel>
+        <asp:Panel ID="MsgPanel" runat="server" Height="467px" Width="500px" style="margin-left: 0px; margin-bottom: 89px;">
+            <div class="ViewDetails" style="margin-left: 0px">
+             <br />
+                <h1>
+                    <asp:Label ID="HelloName" runat="server" Text=""></asp:Label> &nbsp;We will inform you through your Email </h1>
+                <h1>Thank You:) </h1>
+                
+            </div>
+             <p class="ApplyButton">
+                    <asp:Button ID="GoHomePage" Font-Size="16px" runat="server" Text="Go Home Page" BackColor="#F6830F" BorderStyle="Outset" ForeColor="White"  Width="122px" OnClick="GoHomePage_Click" />
+                </p>
+        </asp:Panel>
         </div>
-    
+     
 </asp:Content>

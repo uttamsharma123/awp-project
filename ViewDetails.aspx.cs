@@ -13,7 +13,8 @@ namespace AwP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MsgPanel.Visible = false;
+           // TitlePanel.Visible = false;
             int jobId = Convert.ToInt32(Request.QueryString["JobId"]);//this jobid is comming from findjobpage when user will click on view details then that come in the form of query string ?JobI=""
 
          
@@ -46,8 +47,28 @@ namespace AwP_Project
 
         protected void ApplyNowBtn_Click(object sender, EventArgs e)
         {
-            Response.Write("<script>alert('We will inform you through your Email Thank You :)')</script>");
-           
+            //Response.Write("<script>alert('We will inform you through your Email Thank You :)')</script>");
+
+            HttpCookie cookie = Request.Cookies["UserInfo"];
+            string getUserName = "";
+            if (cookie != null)
+            {
+               getUserName = cookie["fullname"];
+                HelloName.Text = "Hello "+getUserName;
+            }
+                MsgPanel.Visible = true;
+            TitlePanel.Visible = false;
+            
+        }
+
+        protected void GoHomePage_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/FindJobPage.aspx");
+        }
+
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

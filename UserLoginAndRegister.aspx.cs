@@ -39,10 +39,12 @@ namespace AwP_Project
                 SqlDataReader rdr = cmd1.ExecuteReader();
 
                 string Username = "";
+                string FullName = "";
                
                 while (rdr.Read())
                 {
                     Username = rdr.GetString(1);
+                    FullName = rdr.GetString(0);
                    
                 }
                 if(Username == "")
@@ -54,6 +56,7 @@ namespace AwP_Project
                     //Response.Write("<script>alert('Logged In Sucessfully')</script>");
                     HttpCookie cookie = new HttpCookie("UserInfo");
                     cookie["username"] = Username;
+                    cookie["fullname"] = FullName;
                     Response.Cookies.Add(cookie);
                     Response.Redirect("~/findJobPage.aspx");
                     
@@ -92,7 +95,16 @@ namespace AwP_Project
                 cmd1.Connection = con;
                 con.Open();
                 int i = cmd1.ExecuteNonQuery();
-                Response.Write(i + " row[s] inserted ");
+
+                if(i!=0)
+                {
+                    FullName.Text = "";
+                    Username.Text = "";
+                    Password.Text = "";
+                    ConfirmPassword.Text = "";
+                    Gmail.Text = "";
+                }
+                Response.Write("<script>alert('User Register Successfully')</script>");
             }
         }
     }

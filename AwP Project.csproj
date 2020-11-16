@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\calIcon.png" />
+    <Content Include="Images\jobPortalLog.png" />
+    <Content Include="Images\jobs.jpg" />
     <Content Include="Images\NotFound.png" />
     <Content Include="Images\PassIcon.png" />
     <Content Include="Images\user.png" />
