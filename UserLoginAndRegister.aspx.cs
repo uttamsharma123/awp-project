@@ -107,5 +107,14 @@ namespace AwP_Project
                 Response.Write("<script>alert('User Register Successfully')</script>");
             }
         }
+
+        protected void ResetBtn_Click(object sender, EventArgs e)
+        {
+            FullName.Text = "";
+            Username.Text = "";
+            Password.Text = "";
+            ConfirmPassword.Text = "";
+            Gmail.Text = "";
+        }
     }
 }

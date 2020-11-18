@@ -7,7 +7,7 @@
          
       
            
-            <div class="main" style="height: 437px; width: 111%">
+            <div class="main" style="height: 437px; width: 111%; margin-left: 0px;">
                
                 <asp:Wizard ID="Wizard1" CssClass="view-details-job-title" runat="server" ActiveStepIndex="0" Height="16px" Width="630px" StartNextButtonText="Update Profile" StepNextButtonText="" StepPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick" FinishDestinationPageUrl="~/findJobPage.aspx" style="margin-left: 25px" DisplaySideBar="False">
                     <WizardSteps>
