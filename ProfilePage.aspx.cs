@@ -13,16 +13,21 @@ namespace AwP_Project
     public partial class WebForm1 : System.Web.UI.Page
     {
         string getGen = "";
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie cookie = Request.Cookies["UserInfo"];
             string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
             if (!IsPostBack)
             {
                 Calendar1.Visible = false;
                 DropDownList1.Visible = false;
+                DeletePanel1.Visible = false;
+                UpdatePanel1.Visible = false;
             }
 
-            HttpCookie cookie = Request.Cookies["UserInfo"];
+
             if (cookie != null)
             {
                 string getUserName = cookie["username"];
@@ -41,17 +46,17 @@ namespace AwP_Project
                         NameTextBox.Text = rdr.GetString(0);
                         GmailTextBox.Text = GmailLabel.Text = rdr.GetString(3);
                         GenderLabel1.Text = rdr.GetString(4);
-                        getGen=rdr.GetString(4);
-                        
-                       DOBLabel2.Text = rdr.GetString(7);// this is for profile step in wizard
-                      /// DOBTextBox.Text = rdr.GetString(7);//this is for update step in Wizard
+                        getGen = rdr.GetString(4);
+                        UserNameForDelete.Text = rdr.GetString(1);//when user will click on delete radio button then user name will be there
+                        DOBLabel2.Text = rdr.GetString(7);// this is for profile step in wizard
+                        /// DOBTextBox.Text = rdr.GetString(7);//this is for update step in Wizard
                         AddressLabel3.Text = rdr.GetString(5);//this is profile step in wizard
-                      ///AddressTextBox.Text = rdr.GetString(5);//this is for update in wizard
+                        ///AddressTextBox.Text = rdr.GetString(5);//this is for update in wizard
 
 
 
                     }
-                    
+
 
 
 
@@ -61,11 +66,7 @@ namespace AwP_Project
 
         protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e)
         {
-            if (e.CurrentStepIndex == 0)
-            {
 
-
-            }
         }
 
         protected void UpdateSubmitButton_Click(object sender, EventArgs e)
@@ -78,13 +79,13 @@ namespace AwP_Project
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd1 = new SqlCommand();
-                    cmd1.CommandText = "update Users set FullName='" + NameTextBox.Text + "',Gmail='"+GmailTextBox.Text+"',Gender='"+GenderTextBox.SelectedItem.Text+"', DOB='"+DOBTextBox.Text+"',Address='"+AddressTextBox.Text+"' where Username='" + getUserName + "'";
+                    cmd1.CommandText = "update Users set FullName='" + NameTextBox.Text + "',Gmail='" + GmailTextBox.Text + "',Gender='" + GenderTextBox.SelectedItem.Text + "', DOB='" + DOBTextBox.Text + "',Address='" + AddressTextBox.Text + "' where Username='" + getUserName + "'";
                     cmd1.Connection = con;
                     con.Open();
                     int i = cmd1.ExecuteNonQuery();
 
                     Response.Redirect("~/ProfilePage.aspx");
-                   // Response.Write("one user is updated");
+                    // Response.Write("one user is updated");
                 }
             }
         }
@@ -106,25 +107,75 @@ namespace AwP_Project
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-           DOBTextBox.Text= Calendar1.SelectedDate.ToShortDateString();
+            DOBTextBox.Text = Calendar1.SelectedDate.ToShortDateString();
             Calendar1.Visible = false;
             DropDownList1.Visible = false;
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
         {
-           
+
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(DropDownList1.SelectedValue!="-1")
+            if (DropDownList1.SelectedValue != "-1")
             {
 
                 int year = Convert.ToInt32(DropDownList1.SelectedItem.Text);
                 Calendar1.VisibleDate = new DateTime(year, 1, 1);
 
             }
+        }
+
+        protected void UpdateAndDeleteRadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (UpdateAndDeleteRadioButtonList1.SelectedItem.Text == "Delete")
+            {
+                DeletePanel1.Visible = true;
+                UpdatePanel1.Visible = false;
+            }
+            else
+            {
+                DeletePanel1.Visible = false;
+                UpdatePanel1.Visible = true;
+            }
+        }
+
+        protected void DeleteButton1_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
+
+            HttpCookie cookie = Request.Cookies["UserInfo"];//which cookies ware stored when user was logged In and that is we are accessing
+            if (cookie != null)//if cookie is not null
+            {
+                string getUserName = cookie["username"];//only user name storing in the string variable which is stored on cookie
+
+                using (SqlConnection con = new SqlConnection(CS))
+                {
+                    SqlCommand cmd1 = new SqlCommand();
+                    cmd1.CommandText = "delete from users where Username='" + getUserName + "' and Password='" + PasswordForDelete.Text + "'";
+                    cmd1.Connection = con;
+                    con.Open();
+                    int i = cmd1.ExecuteNonQuery();
+                    
+                    if (i != 0)//when i variable is  not equal to 0  
+                    {
+                        //here cookie is deleting 
+                        Response.Cookies["UserInfo"].Expires = DateTime.Now.AddDays(-1);
+                        //Redirecting to Login Page When userLoginAndRegister page
+                        Response.Redirect("~/UserLoginAndRegister.aspx");
+
+                    }
+                    else
+                    {
+                        //if password is entered wrong then he/she will get an error msg.
+                        Response.Write("<script>alert('password is wrong')</script>");
+                    }
+
+                }
+            }
+
         }
     }
 }

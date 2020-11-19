@@ -14,22 +14,34 @@ namespace AwP_Project
         protected void Page_Load(object sender, EventArgs e)
         {
             MsgPanel.Visible = false;
-           // TitlePanel.Visible = false;
-            int jobId = Convert.ToInt32(Request.QueryString["JobId"]);//this jobid is comming from findjobpage when user will click on view details then that come in the form of query string ?JobI=""
+            /*when page loads at that time msgPagnel visibility will be false
+            // TitlePanel.Visible = false;
+            */
+
+ /*this jobid is comming from findjobpage when user will click 
+  * on view details then that come in the form of query string ?JobID=""
+   */
+            int jobId = Convert.ToInt32(Request.QueryString["JobId"]);
 
          
-         
+//this is connection string which we have configured in web.config file
             string CS = ConfigurationManager.ConnectionStrings["EnrollInJob"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
                 SqlCommand cmd1 = new SqlCommand();
-                cmd1.CommandText = "Select * from Jobs where JobID='" +jobId + "'";
+                //we are retrieving all details of jobs where JobID is equal to queryString which click on 
+                //view details button from job
+                cmd1.CommandText = "Select * from Jobs where JobID='" +jobId + "'";//
                 cmd1.Connection = con;
                 con.Open();
+                //rdr which holds all details of jobs 
                 SqlDataReader rdr = cmd1.ExecuteReader();
-                while (rdr.Read())
+                while (rdr.Read())//here we are accessing with the help of Read() method
                 {
-
+                    /*
+                     *rdr.GetString(1) means 2nd column JobTitle which datatype is varchar() 
+                     */
+                    
                     JobTitle.Text = rdr.GetString(1);
                     Address.Text = rdr.GetString(3);
                     CompanyName.Text = rdr.GetString(2);
@@ -47,13 +59,17 @@ namespace AwP_Project
 
         protected void ApplyNowBtn_Click(object sender, EventArgs e)
         {
-            //Response.Write("<script>alert('We will inform you through your Email Thank You :)')</script>");
-
+            
             HttpCookie cookie = Request.Cookies["UserInfo"];
             string getUserName = "";
             if (cookie != null)
             {
-               getUserName = cookie["fullname"];
+                /*Here When User will Click on ApplyNow Button  Then he will get msg with his name where name
+                 * is stored on his local storage 
+                 */
+
+
+                getUserName = cookie["fullname"];
                 HelloName.Text = "Hello "+getUserName;
             }
                 MsgPanel.Visible = true;
@@ -63,12 +79,12 @@ namespace AwP_Project
 
         protected void GoHomePage_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/FindJobPage.aspx");
+            Response.Redirect("~/FindJobPage.aspx");//Redirect to findJopPage
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/FindJobPage.aspx");
+            Response.Redirect("~/FindJobPage.aspx");//Redirect to findJopPage
         }
     }
 }

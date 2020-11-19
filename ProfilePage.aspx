@@ -9,7 +9,7 @@
            
             <div class="main" style="height: 437px; width: 111%; margin-left: 0px;">
                
-                <asp:Wizard ID="Wizard1" CssClass="view-details-job-title" runat="server" ActiveStepIndex="0" Height="16px" Width="630px" StartNextButtonText="Update Profile" StepNextButtonText="" StepPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick" FinishDestinationPageUrl="~/findJobPage.aspx" style="margin-left: 25px" DisplaySideBar="False">
+                <asp:Wizard ID="Wizard1" CssClass="view-details-job-title" runat="server" ActiveStepIndex="1" Height="16px" Width="630px" StartNextButtonText="Update and Delete Profile" StepNextButtonText="" StepPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick" FinishDestinationPageUrl="~/findJobPage.aspx" style="margin-left: 25px">
                     <WizardSteps>
                         <asp:WizardStep ID="WizardStep1" runat="server" Title="Profile">
                             <h3>Profile</h3>
@@ -25,8 +25,24 @@
                            
                         </asp:WizardStep>
                         <asp:WizardStep ID="UpdateStep" runat="server" Title="Update Profile">
-                            <h3>Update Profile </h3>
-                           <p> 
+                            <h3>Update And Delete Profile </h3>
+                             <asp:RadioButtonList ID="UpdateAndDeleteRadioButtonList1" runat="server"  RepeatDirection="Horizontal" AutoPostBack="True" OnSelectedIndexChanged="UpdateAndDeleteRadioButtonList1_SelectedIndexChanged" style="height: 27px">
+                                    <asp:ListItem>Update</asp:ListItem>
+                                    <asp:ListItem>Delete</asp:ListItem>
+                                </asp:RadioButtonList>
+                            <asp:Panel ID="DeletePanel1" runat="server">
+
+                                <p> 
+                               <asp:TextBox CssClass="txt-box"  ID="UserNameForDelete" runat="server" Enabled="False"></asp:TextBox>
+                               </p> 
+                                <p> 
+                               <asp:TextBox CssClass="txt-box" placeholder="Enter Password to Confirm" ID="PasswordForDelete" runat="server"></asp:TextBox>
+                               </p>
+                            <asp:Button  CssClass="btn" ID="DeleteButton1"  runat="server" Text="Delete" Font-Size="15px" OnClick="DeleteButton1_Click"  />
+
+                            </asp:Panel>
+                            <asp:Panel ID="UpdatePanel1" runat="server">
+                                 <p> 
                                &nbsp;</p> 
                               <p> 
                                <asp:TextBox CssClass="txt-box"  ID="NameTextBox" runat="server" Enabled="False"></asp:TextBox>
@@ -80,6 +96,7 @@
                             </p>
                             <asp:Button  CssClass="btn" ID="UpdateSubmitButton"  runat="server" Text="Update" Font-Size="15px" OnClick="UpdateSubmitButton_Click" />
 
+                            </asp:Panel>
                         </asp:WizardStep>
                        
 
