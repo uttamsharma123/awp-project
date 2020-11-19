@@ -9,7 +9,7 @@
            
             <div class="main" style="height: 437px; width: 111%; margin-left: 0px;">
                
-                <asp:Wizard ID="Wizard1" CssClass="view-details-job-title" runat="server" ActiveStepIndex="1" Height="16px" Width="630px" StartNextButtonText="Update and Delete Profile" StepNextButtonText="" StepPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick" FinishDestinationPageUrl="~/findJobPage.aspx" style="margin-left: 25px">
+                <asp:Wizard ID="Wizard1" CssClass="view-details-job-title" runat="server" ActiveStepIndex="0" Height="16px" Width="630px" StartNextButtonText="Update and Delete Profile" StepNextButtonText="" StepPreviousButtonText="" OnFinishButtonClick="Wizard1_FinishButtonClick" FinishDestinationPageUrl="~/findJobPage.aspx" style="margin-left: 25px" DisplaySideBar="False">
                     <WizardSteps>
                         <asp:WizardStep ID="WizardStep1" runat="server" Title="Profile">
                             <h3>Profile</h3>
@@ -17,7 +17,9 @@
                                  <p class="para1">Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label CssClass="asp-label" ID="UserNameLabel" runat="server" Text="Label"></asp:Label></p>
                             <p class="para1">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label CssClass="asp-label" ID="NameLabel" runat="server" Text="Label"></asp:Label></p>
                             <p class="para1">Gmail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label CssClass="asp-label" ID="GmailLabel" runat="server" Text="Label"></asp:Label></p>
-                             <p class="para1">Gender:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label CssClass="asp-label" ID="GenderLabel1" runat="server" Text="Label"></asp:Label></p>
+                            <p class="para1">Skills:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label CssClass="asp-label" ID="SkillsLabel" runat="server" Text="Label"></asp:Label></p>
+                            
+                                <p class="para1">Gender:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label CssClass="asp-label" ID="GenderLabel1" runat="server" Text="Label"></asp:Label></p>
                             <p class="para1">DateOf Birth: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label CssClass="asp-label" ID="DOBLabel2" runat="server" Text="Label"></asp:Label></p>
                             <p class="para1">Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label CssClass="asp-label" ID="AddressLabel3" runat="server" Text="Label"></asp:Label></p>
                             
@@ -36,7 +38,7 @@
                                <asp:TextBox CssClass="txt-box"  ID="UserNameForDelete" runat="server" Enabled="False"></asp:TextBox>
                                </p> 
                                 <p> 
-                               <asp:TextBox CssClass="txt-box" placeholder="Enter Password to Confirm" ID="PasswordForDelete" runat="server"></asp:TextBox>
+                               <asp:TextBox CssClass="txt-box" placeholder="Enter Password to Confirm" ID="PasswordForDelete" runat="server" TextMode="Password"></asp:TextBox>
                                </p>
                             <asp:Button  CssClass="btn" ID="DeleteButton1"  runat="server" Text="Delete" Font-Size="15px" OnClick="DeleteButton1_Click"  />
 
@@ -92,6 +94,10 @@
                             </p>
                             <p>
                                <asp:TextBox placeholder="Update Address" CssClass="txt-box" ID="AddressTextBox" runat="server"></asp:TextBox>
+
+                            </p>
+                              <p>
+                               <asp:TextBox placeholder="Enter Your Skills eg.MsOffice" CssClass="txt-box" ID="SkillsTextBox1" runat="server"></asp:TextBox>
 
                             </p>
                             <asp:Button  CssClass="btn" ID="UpdateSubmitButton"  runat="server" Text="Update" Font-Size="15px" OnClick="UpdateSubmitButton_Click" />

@@ -47,6 +47,7 @@ namespace AwP_Project
                         GmailTextBox.Text = GmailLabel.Text = rdr.GetString(3);
                         GenderLabel1.Text = rdr.GetString(4);
                         getGen = rdr.GetString(4);
+                        SkillsLabel.Text = rdr.GetString(6);
                         UserNameForDelete.Text = rdr.GetString(1);//when user will click on delete radio button then user name will be there
                         DOBLabel2.Text = rdr.GetString(7);// this is for profile step in wizard
                         /// DOBTextBox.Text = rdr.GetString(7);//this is for update step in Wizard
@@ -79,7 +80,7 @@ namespace AwP_Project
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd1 = new SqlCommand();
-                    cmd1.CommandText = "update Users set FullName='" + NameTextBox.Text + "',Gmail='" + GmailTextBox.Text + "',Gender='" + GenderTextBox.SelectedItem.Text + "', DOB='" + DOBTextBox.Text + "',Address='" + AddressTextBox.Text + "' where Username='" + getUserName + "'";
+                    cmd1.CommandText = "update Users set FullName='" + NameTextBox.Text + "',Skills='"+SkillsTextBox1.Text+"',Gmail='" + GmailTextBox.Text + "',Gender='" + GenderTextBox.SelectedItem.Text + "', DOB='" + DOBTextBox.Text + "',Address='" + AddressTextBox.Text + "' where Username='" + getUserName + "'";
                     cmd1.Connection = con;
                     con.Open();
                     int i = cmd1.ExecuteNonQuery();
